@@ -27,16 +27,22 @@ function setBackgroundImg() {
 	$("style").append("@media screen and (max-width: " + imgWidth +") {#background{left: 50%; margin-left: " +String(parseInt(imgWidth, 10) / 2 * -1) + "px}}");
 }
 
-function setNavIconLeft() {
+function setNavIcon() {
+	//Center Icons
 	$navIcons = $("#top-nav i");
 	for (var i = 0; i < $navIcons.length; i++) {
 		$($navIcons[i]).css("left", "calc(50% - " + String($($navIcons[i]).width() / 2) + "px)");
 	}
+	//Give Animation Delay
+	$links = $("#top-nav a");
+		for (var i = 0; i < $navIcons.length; i++) {
+			$($links[i]).css("animation-delay", String(i * 0.1) + "s");
+		}
 }
 
 function checkNavIcon() {
 	if ($("#top-nav i").length > 0) {
-		setTimeout(setNavIconLeft, 100);
+		setTimeout(setNavIcon, 100);
 	}
 	else setTimeout(checkNavIcon, 50);
 }

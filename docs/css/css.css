@@ -7,14 +7,14 @@ p, h1, h2, h3, h4, h5, h6 {padding: 0; margin: 0}
 /* Top nav */
 #top-nav {position: fixed; top: 16px; left: 16px}
 #top-nav img {display: block}
-#top-nav .button {width: 64px; border-radius: 25%; cursor: pointer; transition: 0.3s; float: left}
+#top-nav .button {width: 64px; border-radius: 25%; cursor: pointer; transition: 0.3s; float: left; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25)}
 #top-nav .button:hover {transform: rotate(45deg) scale(0.75);}
-#top-nav #links {float: left; margin-left: 16px; position: relative; bottom: 64px; opacity: 0}
-#top-nav #links.open {animation: slideIn 0.3s ease forwards}
-#top-nav #links.close {animation: slideOut 0.3s ease forwards}
+#top-nav #links {float: left; margin-left: 16px; position: relative;}
 #top-nav ul {margin: 0; padding: 0; list-style: none}
 #top-nav li {float: left}
-#top-nav a {display: block; font-size: 32px; text-decoration: none; font-family: sans-serif; color: #fff; position: relative}
+#top-nav a {display: block; font-size: 32px; text-decoration: none; font-family: sans-serif; color: #fff; position: relative;}
+#top-nav #links.open a {animation: slideIn 0.3s ease forwards; bottom: 64px; opacity: 0}
+#top-nav #links.close a {animation: slideOut 0.3s ease forwards; bottom: 0; opacity: 1}
 #top-nav .links {overflow: hidden; position: relative; padding: 13px}
 #top-nav p {position: relative; transition: 0.3s}
 #top-nav a:hover p {transform: translateY(-48px);}
@@ -26,11 +26,11 @@ p, h1, h2, h3, h4, h5, h6 {padding: 0; margin: 0}
 
 /* Cards */
 .card-group {float: left}
-.card {width: 100%; background-color: #fff; padding: 16px; border-radius: 4px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25); font-family: sans-serif; position: relative; margin-bottom: 16px;}
+.card {width: 100%; background-color: #fff; padding: 16px; border-radius: 4px; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25); font-family: sans-serif; position: relative; margin-bottom: 16px; transition: 0.1s}
 .card.left {float: left; clear: left}
 .card.right {float: right; clear: right}
 .card.half {width: calc(50% - 40px)}
-.card:hover {bottom: 1px}
+.card:hover {transform: scale(1.05)}
 .card p {margin-bottom: 4px}
 
 @keyframes slideIn {
